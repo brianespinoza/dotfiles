@@ -1,5 +1,7 @@
+brew "luarocks"
 brew "neovim"
 brew "yabai"
 brew "skhd"
 brew "stow"
 cask "karabiner-elements"
+cask "wezterm"
