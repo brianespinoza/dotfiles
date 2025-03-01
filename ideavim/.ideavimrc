@@ -1,0 +1,87 @@
+" my jetbrains config. heavily influenced, read: direct copy, 
+" from https://gist.github.com/ericvanjohnson/079ae871e156054d3779e8f1efd8375d
+
+
+let mapleader = " "
+
+set clipboard=unnamedplus
+set ignorecase smartcase
+set NERDTree
+set hlsearch
+set showmode
+set autoindent
+set smartindent
+set scrolloff=30
+set history=1000
+set incsearch
+set relativenumber
+set number
+set smartcase
+set hlsearch
+set visualbell
+set commentary
+
+
+" To copy text to the end-of-line, press Y.
+" This mapping sets up Y to be consistent with
+" the C and D operators, which act from the cursor
+" to the end of the line. The default behavior of Y
+" is to yank the whole line.
+nnoremap Y Vy
+
+" Splitting Windows
+nmap <leader>\ :vsplit<CR>
+nmap <leader>- :split<CR>
+
+" When in normal mode and I hit Enter,
+" then save file please
+nmap <CR> :action ReformatCode<CR> :write<CR>
+nnoremap <leader>=  :action ReformatCode<CR> :write<CR>
+
+" Greatest remap EVER!! 
+" Let me explain, this remap while in visual mode
+" will delete what is currently highlighted and replace it 
+" with what is in the register BUT it will YANK (delete) it 
+" to a VOID register. Meaning I still have what I originally had
+" when I pasted. I don't loose the previous thing I YANKED!
+vnoremap <leader>p "_dP
+
+" Open Terminal
+nmap <Leader>t :action ActivateTerminalToolWindow<CR>
+
+" Mapping to mimic BufferExplorer
+" nmap <Leader>be :action Switcher<CR>
+nmap <Leader>fr :action RecentFiles<CR>
+nmap <Leader>ff :action GotoFile<CR>
+nmap <Leader>fg :action SearchEverywhere<CR>
+
+" Toggle NERDTree
+map <leader>e :NERDTreeToggle<CR>
+
+" Toggle ToggleDistractionFreeMode
+nmap <leader>df :action ToggleDistractionFreeMode<CR>
+
+" Quick quit
+map <leader>q :q<CR>
+
+" Some Git Shortcuts for view status, pull, and branches
+" Mapping mimic Fugitive in my native vim
+nmap <Leader>gs :action CheckinProject<CR>
+nmap <Leader>gc :action CheckinProject<CR>
+nmap <Leader>ga :action Git.Add<CR>
+nmap <Leader>gp :action Git.Pull<CR>
+nmap <Leader>gn :action Annotate<CR>
+nmap <Leader>gl :action Git.Log<CR>
+nmap <Leader>go :action Github.Open.In.Browser<CR>
+nmap <Leader>br :action Git.Branches<CR>
+nmap <Leader>gb :action Git.Branches<CR>
+
+" Commenting
+nmap <Leader>cb :action CommentByBlockComment<CR>
+nmap <Leader>] :bnext<CR>
+nmap <Leader>[ :bprevious<CR>
+
+
+" Put search results in the middle of the screen
+nnoremap n nzz
+nnoremap N Nzz

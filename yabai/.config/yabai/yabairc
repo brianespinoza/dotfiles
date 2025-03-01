@@ -1,0 +1,80 @@
+# default layout (can be bsp, stack or float)
+yabai -m config layout bsp
+
+# New window spawns to the right if vertical split, or bottom if horizontal split
+yabai -m config window_placement second_child
+
+
+
+yabai -m config top_padding    8
+yabai -m config bottom_padding 8
+yabai -m config left_padding   8
+yabai -m config right_padding  8
+yabai -m config window_gap     8
+yabai -m config auto_balance off
+yabai -m config split_ratio 0.5
+yabai -m config window_shadow off
+
+# 
+# # padding set to 2px
+# yabai -m config top_padding 1
+# yabai -m config bottom_padding 1
+# yabai -m config left_padding 2
+# yabai -m config right_padding 2
+# yabai -m config window_gap 2
+
+# center mouse on window with focus
+yabai -m config mouse_follows_focus on
+
+# modifier for clicking and dragging with mouse
+yabai -m config mouse_modifier alt
+# set modifier + left-click drag to move window
+yabai -m config mouse_action1 move
+# set modifier + right-click drag to resize window
+yabai -m config mouse_action2 resize
+
+yabai -m config window_opacity on
+yabai -m config active_window_opacity 1.0
+yabai -m config normal_window_opacity 0.8
+
+
+# when window is dropped in center of another window, swap them (on edges it will split it)
+#yabai -m mouse_drop_action swap
+
+function setup_space {
+  local idx="$1"
+  local name="$2"
+  local space=
+  echo "setup space $idx : $name"
+
+  space=$(yabai -m query --spaces --space "$idx")
+  if [ -z "$space" ]; then
+    yabai -m space --create
+  fi
+
+  yabai -m space "$idx" --label "$name"
+}
+
+#taken from https://d12frosted.io/posts/2022-04-23-yabai-spaces.html
+setup_space 1 web
+setup_space 2 code
+setup_space 3 journal
+setup_space 4 misc
+setup_space 5 media
+setup_space 6 social
+setup_space 7 other2
+
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^Karabiner-Elements$" manage=off
+
+yabai -m rule --add app="^Google Chrome$" space=1
+yabai -m rule --add app="^WezTerm$" space=2
+yabai -m rule --add app="^Rider$" space=2
+yabai -m rule --add app="^Obsidian$" space=3
+yabai -m rule --add app="^Spotify$" space=5
+yabai -m rule --add app="^Discord$" space=6
+yabai -m rule --add app="^Messages$" space=6
+yabai -m rule --add app="^Calendar$" space=7
+
