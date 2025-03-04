@@ -1,6 +1,7 @@
 tap "localstack/tap"
 brew "localstack-cli"
 brew "thefuck"
+brew "zoxide"
 brew "luarocks"
 brew "neovim"
 brew "yabai"

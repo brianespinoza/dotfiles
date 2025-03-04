@@ -39,8 +39,6 @@ This will install and start the services.
 | `gi <template> >> .gitignore` | Appending programming language settings to your projects .gitignore. |
 
 
-
-
 ### ls command
 
 | Alias | Command      | Description                                                                 |
@@ -81,6 +79,28 @@ This will install and start the services.
 | sgrep | `grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS}` | Useful for searching within files    |
 
 \* Only if the [`fd`](https://github.com/sharkdp/fd) command isn't installed.
+
+### The Fuck
+
+| Alias | Description |
+| :--- | :--- |
+| `fuck` | Fix previous command |
+
+### Zoxide
+
+| Alias | Description |
+| :--- | :--- |
+| `z` | Open Zoxide |
+| `z <query>` | Search Zoxide |
+| z foo              | cd into highest ranked directory matching foo |
+| z foo bar          | cd into highest ranked directory matching foo and bar |
+| z foo /            | cd into a subdirectory starting with foo |
+| z ~/foo            | z also works like a regular cd command |
+| z foo/             | cd into relative path |
+| z ..               | cd one level up |
+| z -                | cd into previous directory |
+| zi foo             | cd with interactive selection (using fzf) |
+| z foo<SPACE><TAB>  | show interactive completions (zoxide v0.8.0+, bash 4.4+/fish/zsh only) |
 
 ### Other Aliases
 

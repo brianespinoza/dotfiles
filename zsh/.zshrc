@@ -65,3 +65,4 @@ zstyle :prompt:pure:git:stash show yes
 # === END ===
 
 eval "$(thefuck --alias)"
+eval "$(zoxide init zsh)"
