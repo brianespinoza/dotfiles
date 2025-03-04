@@ -3,7 +3,7 @@ fn - r : yabai -m space --rotate 270
 
 
 ## Reload skhd configuration
-shift + fn - r : brew services restart yabai 
+shift + fn - r : yabai --restart-service
 # fn - q : brew services stop yabai
 # fn - s : brew services start yabai 
 
