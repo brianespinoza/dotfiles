@@ -35,6 +35,8 @@ zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 # syntax highlighting
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
+zplug "plugins/git",   from:oh-my-zsh
+
 # Install or load plugins
 if ! zplug check --verbose; then
   echo "===> Installing missing zplug plugins..."
