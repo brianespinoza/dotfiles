@@ -21,7 +21,7 @@ This will install and start the services.
 
 ### git and alias Commands
 
-| Alias | Command | Description |
+| Alias | Description |
 | :--- | :--- |
 | `als` | List all aliases by group |
 | `als <group>` or `als -g <group>` | List all aliases in a group or a specific alias |
@@ -32,7 +32,7 @@ This will install and start the services.
 
 ### gitignore commands
 
-| Alias | Command | Description |
+| Alias | Description |
 | :--- | :--- |
 | `gi list` | List all gitignore templates |
 | `gi <template>` | Show gitignore template |
