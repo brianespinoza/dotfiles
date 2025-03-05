@@ -151,4 +151,15 @@ or `py`.
 | sortnr   | `sort -n -r`       | Used to sort the lines of a text file                       |
 | unexport | `unset`            | Used to unset an environment variable                       |
 
+### Httpie examples
+
+| Command | Description |
+| :--- | :--- |
+| `https httpie.io/hello` | GET request |
+| `http PUT pie.dev/put X-API-Token:123 name=John` | PUT request |
+| `http https://httpbin.org/get` | Send a GET request to the specified URL |
+| `http -f POST pie.dev/post hello=World` | Send a POST request form. |
+| `http -v pie.dev/get` | See the request that is sent. |
+| `http pie.dev/post < files/data.json` | Upload a file. |
+| `http pie.dev/image/png > image.png` | Download a file. |
 
