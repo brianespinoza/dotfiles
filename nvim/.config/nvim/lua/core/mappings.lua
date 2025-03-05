@@ -20,7 +20,7 @@ function SaveAndClose()
 end
 
 -- quick save
-vim.api.nvim_set_keymap('n', '<leader>qs', '<cmd>lua SaveAndClose()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>qq', '<cmd>lua SaveAndClose()<CR>', { noremap = true, silent = true })
 
 
 -- toggle quickfix window
@@ -35,7 +35,9 @@ local function toggle_qf()
 end
 
 -- `qw`ick fix list
-vim.keymap.set("n", "<leader>qw", toggle_qf, { desc = "Toggle Quickfix List" })
+vim.keymap.set("n", "<leader>qf", toggle_qf, { desc = "Toggle Quickfix List" })
+vim.keymap.set("n", "<leader>qn", function() vim.cmd("cnext") end, { desc = "Next Quickfix List" })
+vim.keymap.set("n", "<leader>qp", function() vim.cmd("cprevious") end, { desc = "Previous Quickfix List" })
 
 vim.keymap.set('n', 'Y', 'Vy<Esc>', { desc = '[Y]ank whole line' })
 
