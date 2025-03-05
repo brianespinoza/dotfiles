@@ -1,3 +1,4 @@
+-- TIP : use <C-q> to send all selected items to quickfix. if none selected, it will send everything in the telescope window to quickfix.
 return {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.4',
@@ -62,5 +63,6 @@ return {
 
         -- Find Help
         vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
     end,
 }

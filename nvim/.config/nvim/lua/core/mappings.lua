@@ -19,7 +19,23 @@ function SaveAndClose()
     vim.cmd('bdelete')
 end
 
-vim.api.nvim_set_keymap('n', '<leader>q', '<cmd>lua SaveAndClose()<CR>', { noremap = true, silent = true })
+-- quick save
+vim.api.nvim_set_keymap('n', '<leader>qs', '<cmd>lua SaveAndClose()<CR>', { noremap = true, silent = true })
+
+
+-- toggle quickfix window
+local function toggle_qf()
+  -- get the quickfix window id (0 if closed)
+  local qf_win = vim.fn.getqflist({winid = 1}).winid
+  if qf_win == 0 then
+    vim.cmd("copen")
+  else
+    vim.cmd("cclose")
+  end
+end
+
+-- `qw`ick fix list
+vim.keymap.set("n", "<leader>qw", toggle_qf, { desc = "Toggle Quickfix List" })
 
 vim.keymap.set('n', 'Y', 'Vy<Esc>', { desc = '[Y]ank whole line' })
 
