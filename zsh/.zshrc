@@ -66,3 +66,6 @@ zstyle :prompt:pure:git:stash show yes
 
 eval "$(thefuck --alias)"
 eval "$(zoxide init zsh)"
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)

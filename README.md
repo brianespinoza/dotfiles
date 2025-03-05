@@ -19,6 +19,15 @@ This will install and start the services.
 
 ## Features
 
+### Wezterm shortcuts
+
+| Shortcut | Description |
+| :--- | :--- |
+| `Ctrl` + `Shift` + <SPACE> | Quick-select mode. Copy anything on screen. |
+| `Ctrl` + `Shift` + `X` | Copy mode. Navigate the terminal with vim keys. |
+
+
+
 ### git and alias Commands
 
 | Alias | Description |
@@ -38,6 +47,12 @@ This will install and start the services.
 | `gi <template>` | Show gitignore template |
 | `gi <template> >> .gitignore` | Appending programming language settings to your projects .gitignore. |
 
+### fzf usage
+
+| Alias | Description |
+| :--- | :--- |
+| `fzf` | Open fzf |
+| `git log | fzf <TAB>` | Search the output of a command |
 
 ### ls command
 
