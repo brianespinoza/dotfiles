@@ -2,6 +2,7 @@
 tap "localstack/tap"
 brew "localstack-cli"
 cask "ngrok"
+brew "httpie"
 
 # cli tools
 brew "thefuck"

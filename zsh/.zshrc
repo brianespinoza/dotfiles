@@ -39,6 +39,8 @@ zplug "plugins/git",   from:oh-my-zsh
 zplug "plugins/gitignore",   from:oh-my-zsh
 zplug "plugins/aliases", from:oh-my-zsh
 zplug "plugins/common-aliases", from:oh-my-zsh
+zplug "plugins/ngrok", from:oh-my-zsh
+zplug "plugins/httpie", from:oh-my-zsh
 
 # Install or load plugins
 if ! zplug check --verbose; then
