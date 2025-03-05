@@ -1,12 +1,22 @@
+# developer tools
 tap "localstack/tap"
 brew "localstack-cli"
+cask "ngrok"
+
+# cli tools
 brew "thefuck"
 brew "zoxide"
+
+# editors
 brew "luarocks"
 brew "neovim"
+
+# window manager
 brew "yabai"
 brew "skhd"
-brew "stow"
 cask "karabiner-elements"
 cask "wezterm"
+
+# utilities
+brew "stow"
 
