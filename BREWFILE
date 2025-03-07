@@ -8,6 +8,7 @@ brew "httpie"
 brew "thefuck"
 brew "zoxide"
 brew "ripgrep"
+brew "fd"
 
 # editors
 brew "luarocks"

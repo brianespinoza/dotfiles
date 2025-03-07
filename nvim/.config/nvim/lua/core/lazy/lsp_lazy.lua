@@ -39,6 +39,7 @@ return {
             ensure_installed = {
                 "tailwindcss",
                 -- "tsserver",
+                "basedpyright",
                 "jsonls",
                 "html",
                 "cssls",
@@ -114,6 +115,17 @@ return {
                     local lspconfig = require("lspconfig")
                     lspconfig.tailwindcss.setup {
                         capabilities = capabilities,
+                    }
+                end,
+                ["basedpyright"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.basedpyright.setup {
+                        capabilities = capabilities,
+                        settings = {
+                            basedpyright = {
+                                typeCheckingMode = "standard",
+                            },
+                        },
                     }
                 end,
             }
