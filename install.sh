@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# Create ~/code directory if it doesn't exist
+mkdir -p "$HOME/code"
+
+# Create ~/.dotfiles directory if it doesn't exist
+mkdir -p "$HOME/.dotfiles"
 
 # Install homebrew if not present
 if ! command -v brew &> /dev/null

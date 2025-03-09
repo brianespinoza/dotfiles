@@ -37,7 +37,7 @@ end
 
 
 local defaultfont = w.font 'Fira Code'
-local default_cwd = os.getenv("HOME") .. "/Source"
+local default_cwd = os.getenv("HOME") .. "/code"
 
 local config = {
     default_cwd = default_cwd,
