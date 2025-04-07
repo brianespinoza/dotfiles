@@ -1,0 +1,30 @@
+# developer tools
+tap "localstack/tap"
+brew "localstack-cli"
+cask "ngrok"
+brew "httpie"
+
+# cli tools
+brew "antidote"
+brew "thefuck"
+brew "zoxide"
+brew "ripgrep"
+brew "fd"
+brew "fzf"
+brew "jq"
+
+# editors
+brew "luarocks"
+brew "neovim"
+
+# window manager
+brew "koekeishiya/formulae/yabai"
+cask "nikitabobko/tap/aerospace"
+
+# brew "koekeishiya/skhd"
+cask "karabiner-elements"
+cask "wezterm"
+
+# utilities
+brew "stow"
+

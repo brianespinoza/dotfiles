@@ -1,0 +1,72 @@
+##  rotate layout clockwise
+fn - r : yabai -m space --rotate 270
+
+
+## Reload skhd configuration
+shift + fn - r : yabai --restart-service
+# fn - q : brew services stop yabai
+# fn - s : brew services start yabai 
+
+
+## Window focus direction
+fn - h : yabai -m window --focus west
+fn - j : yabai -m window --focus south
+fn - k : yabai -m window --focus north
+fn - l : yabai -m window --focus east
+
+
+##move window to prev and next space
+fn - p : yabai -m window --space prev; 
+fn - n : yabai -m window --space next;
+
+## move window to space #
+fn - 1 : yabai -m window --space 1;
+fn - 2 : yabai -m window --space 2;
+fn - 3 : yabai -m window --space 3;
+fn - 4 : yabai -m window --space 4;
+fn - 5 : yabai -m window --space 5;
+fn - 6 : yabai -m window --space 6;
+fn - 7 : yabai -m window --space 7;
+fn - 8 : yabai -m window --space 8;
+
+## flip along y-axis
+fn - y : yabai -m space --mirror y-axis
+
+## toggle window float and Capital F to toggle fullscreen
+fn - f : yabai -m window --toggle float --grid 8:8:1:1:4:4 
+
+## maximize a window
+fn - m : yabai -m window --toggle zoom-fullscreen
+
+## balance out tree of windows (resize to occupy same area)
+fn - e : yabai -m space --balance
+
+## Move the vertical divider to the left (making the right window narrower)
+fn + alt - l : yabai -m query --windows --space | jq -r 'map(select(.minimized == 0)) | max_by(.frame.x + .frame.w) | .id' | xargs -I{} yabai -m window --focus {}; yabai -m window --resize left:20:0
+
+## Move the vertical divider to the right (making the right window wider)
+fn + alt - h : yabai -m query --windows --space | jq -r 'map(select(.minimized == 0)) | max_by(.frame.x + .frame.w) | .id' | xargs -I{} yabai -m window --focus {}; yabai -m window --resize left:-20:0
+
+
+# custom script: move current window to your secondary display
+# checks which space is currently in focus and note which display its on, move only that window to the alternate display
+# mnemonics: fn d for move to other [d]isplay
+fn - d : current_window_id=$(yabai -m query --windows | jq -r '.[] | select(."has-focus" == true) | .id');current_display=$(yabai -m query --windows | jq -r '.[] | select(."has-focus" == true) | .display');target_display=$((3-current_display));yabai -m window $current_window_id --display $target_display;yabai -m display --focus $target_display;
+
+## custom script: move entire current space to your secondary display.
+# checks which space is currently in focus and store which display its on, if display 1, move all windows to display 2 and vice versa...
+# mnemonics: shift fn d for a super version of move to [D]isplay that moves entire space
+## 
+# shift + fn - d : 
+# current_space_id=$(yabai -m query --spaces | jq -r '.[] | select(."has-focus" == true) | .index'); 
+# current_display=$(yabai -m query --spaces | jq -r '.[] | select(."has-focus" == true) | .display'); 
+# target_display=$((3 - current_display)); 
+# yabai -m query --windows --space $current_space_id | jq -r '.[] | .id' | tail -r | xargs -I{} yabai -m window {} --display $target_display; 
+# yabai -m display --focus $target_display
+##
+shift + fn - d : current_space_id=$(yabai -m query --spaces | jq -r '.[] | select(."has-focus" == true) | .index'); current_display=$(yabai -m query --spaces | jq -r '.[] | select(."has-focus" == true) | .display'); target_display=$((3 - current_display)); yabai -m query --windows --space $current_space_id | jq -r '.[] | .id' | tail -r | xargs -I{} yabai -m window {} --display $target_display; yabai -m display --focus $target_display
+
+
+## move focus to the other display
+fn - t : yabai -m display --focus 2
+fn - g : yabai -m display --focus 1
