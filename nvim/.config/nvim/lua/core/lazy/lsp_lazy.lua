@@ -105,10 +105,11 @@ return {
         -- Set vim motion for <Space> + c + a for display code action suggestions for code diagnostics in both normal and visual mode
         vim.keymap.set({ "n", "v" }, "<leader>ga", vim.lsp.buf.code_action, { desc = "[C]ode [A]ctions" })
         -- Set vim motion for <Space> + c + r to display references to the code under the cursor
-        vim.keymap.set("n", "<leader>gr", require("telescope.builtin").lsp_references, { desc = "[C]ode Goto [R]eferences" })
+        --- replaced this with fzf-lua get references
+        -- vim.keymap.set("n", "<leader>gr", require("telescope.builtin").lsp_references, { desc = "[C]ode Goto [R]eferences" })
         -- Set vim motion for <Space> + c + i to display implementations to the code under the cursor
-        vim.keymap.set("n", "<leader>gi", require("telescope.builtin").lsp_implementations, { desc = "[C]ode Goto [I]mplementations" })
-        -- Set a vim motion for <Space> + c + <Shift>R to smartly rename the code under the cursor
+        --- replaced this with fzf-lua get implementations
+        -- vim.keymap.set("n", "<leader>gi", require("telescope.builtin").lsp_implementations, { desc = "[C]ode Goto [I]mplementations" })
         vim.keymap.set("n", "<leader>R", vim.lsp.buf.rename, { desc = "[C]ode [R]ename" })
         -- Set a vim motion for <Space> + c + <Shift>D to go to where the code/object was declared in the project (class file)
         vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, { desc = "[C]ode Goto [D]eclaration" })

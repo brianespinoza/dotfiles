@@ -13,6 +13,9 @@ brew "fd"
 brew "fzf"
 brew "jq"
 
+# dependencies for fzf-lua
+brew "bat"
+
 # editors
 brew "luarocks"
 brew "neovim"
