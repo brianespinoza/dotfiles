@@ -30,6 +30,13 @@ return {
                 "<leader>tq",
                 "<cmd>Trouble qflist toggle focus=true<cr>",
                 desc = "[T]rouble [Q]uickfix List",
+            },
+            {
+                "<C-t>",
+                function()
+                    vim.diagnostic.open_float({ border = "rounded" })
+                end,
+                desc = "[T]rouble [F]loat",
             }
         },
         opts = {}, -- for default options, refer to the configuration section for custom setup.

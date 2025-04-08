@@ -92,7 +92,7 @@ local function setup_jdtls()
         },
         textDocument = {
             completion = {
-                snippetSupport = false
+                snippetSupport = true -- [bespinoza] I changed this to true 
             }
         }
     }

@@ -1,20 +1,18 @@
 return {
-    "supermaven-nvim",
+    "supermaven-inc/supermaven-nvim",
     event = "LspAttach",
-    -- default opts if we ever decide to use them. we'll need to add a config section
     opts = {
+        disable_inline_completion = false, -- enables inline completion for use with cmp
         keymaps = {
-            accept_suggestion = "<Tab>",
+            accept_suggestion = "<C-l>", -- accept suggestion with <C-l> to move forward
             clear_suggestion = "<C-]>",
             accept_word = "<C-j>",
         },
+        disable_keymaps = false,
         ignore_filetypes = { cpp = true, env = true },
         color = {
             suggestion_color = "#ffffff",
             cterm = 244,
         },
-        disable_inline_completion = false, -- disables inline completion for use with cmp
-        disable_keymaps = false,       -- disables built in keymaps for more manual control,,
     }
 }
-
