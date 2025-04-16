@@ -66,3 +66,8 @@ export NVM_DIR="$HOME/.nvm"
 
 # zprof # Uncomment to enable profiling
 export PATH="/opt/homebrew/opt/ffmpeg@4/bin:$PATH"
+
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"

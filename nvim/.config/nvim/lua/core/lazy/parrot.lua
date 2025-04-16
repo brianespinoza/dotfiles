@@ -23,7 +23,7 @@ return {
             -- -- provide an empty list to make provider available (no API key required)
             -- ollama = {},
             openai = {
-                api_key = os.getenv "MY_OPENAI_API_KEY",
+                api_key = ""
             }
             -- github = {
             --     api_key = os.getenv "GITHUB_TOKEN",

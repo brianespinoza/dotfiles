@@ -92,7 +92,21 @@ return {
         -- File Pickers
         { "<leader>pf", "<cmd>FzfLua files<cr>", desc = "[p]roject [f]iles" },
         { "<leader>ff", "<cmd>FzfLua files<cr>", desc = "[f]ind [f]iles" },
-        { "<leader>fw", "<cmd>FzfLua grep_cword<cr>", desc = "[f]ind [w]ord" },
+        -- { "<leader>fw", "<cmd>FzfLua grep_cword<cr>", desc = "[f]ind [w]ord" },
+        { "<leader>fw", function()
+            require("fzf-lua").live_grep({
+                prompt_title = "",
+            })
+        end,
+            desc = "find [w]ord"
+        },
+        { "<leader>fiw", function()
+            require("fzf-lua").grep_cword({
+                prompt_title = "",
+            })
+        end,
+            desc = "find in [w]ord"
+        },
         { "<leader>sd", function()
             require("fzf-lua").live_grep({
                 cwd = "~/.config/nvim/",

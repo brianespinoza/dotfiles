@@ -34,5 +34,11 @@ return {
             SetColor("kanagawa-wave")
         end,
 
+    },
+    {
+        "thesimonho/kanagawa-paper.nvim",
+        opts = {},
+        lazy = true
+
     }
 }

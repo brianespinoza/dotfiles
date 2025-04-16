@@ -1,6 +1,7 @@
 return {
     -- wezterm config
     'willothy/wezterm.nvim',
+    event = "UIEnter",
     config = function()
         local w = require("wezterm");
         w.setup({});

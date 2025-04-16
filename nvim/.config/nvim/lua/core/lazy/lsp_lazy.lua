@@ -8,12 +8,11 @@ return {
         { "williamboman/mason.nvim", opts = {} },
         "williamboman/mason-lspconfig.nvim",
         "WhoIsSethDaniel/mason-tool-installer.nvim",
-        "jay-babu/mason-nvim-dap.nvim",
 
         -- Useful status updates for LSP.
         { "j-hui/fidget.nvim", opts = {} },
     },
-    event = { "BufReadPre", "BufNewFile" },
+    event = { "UIEnter", "BufReadPre", "BufNewFile" },
     config = function()
         -- Lazy-load Mason
         require("mason").setup()
@@ -66,7 +65,7 @@ return {
 
                 -- Execute a code action, usually your cursor needs to be on top of an error
                 -- or a suggestion from your LSP for this to activate.
-                map("<leader>.", vim.lsp.buf.code_action, "[C]code [A]action", { "n", "x" })
+                map("<leader>.", vim.lsp.buf.code_action, "[C]code [A]action", { "n", "x", "v" })
 
                 -- WARN: This is not Goto Definition, this is Goto Declaration.
                 --  For example, in C this would take you to the header.
