@@ -6,7 +6,6 @@ return {
         local w = require("wezterm");
         w.setup({});
 
-
         -- Define a keymap to open a new vertical split
         vim.keymap.set("n", '<leader>wl', function()
             w.split_pane.horizontal({ domain = "CurrentPaneDomain" })

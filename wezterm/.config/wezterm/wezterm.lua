@@ -41,6 +41,7 @@ local defaultfont = w.font 'Fira Code'
 local default_cwd = os.getenv("HOME") .. "/code"
 
 local config = {
+    leader = { key = 'e', mods = 'CTRL', timeout_milliseconds = 1000 },
     default_cwd = default_cwd,
     font = defaultfont,
     color_scheme = 'Kanagawa (Gogh)',
@@ -55,6 +56,42 @@ local config = {
         split_nav('resize', 'j'),
         split_nav('resize', 'k'),
         split_nav('resize', 'l'),
+        --- open right terminal
+        {
+            key = 'l',
+            mods = 'LEADER|CTRL',
+            action = w.action.SplitHorizontal { domain = 'CurrentPaneDomain' }
+        },
+        --- open bottom terminal
+        {
+            key = 'b',
+            mods = 'LEADER|CTRL',
+            action = w.action.SplitVertical { domain = 'CurrentPaneDomain' }
+        },
+        --- open workspace launcher
+        {
+            key = ' ',
+            mods = 'LEADER|CTRL',
+            action = w.action.ShowLauncherArgs { flags = 'WORKSPACES' },
+        },
+        --- send current pane to new tab
+        {
+            key = ']',
+            mods = 'LEADER|CTRL',
+            action = w.action_callback(function(win, pane)
+                pane:move_to_new_tab()
+            end),
+        },
+        --- squick select release tag
+        {
+            key = 't',
+            mods = 'LEADER|CTRL',
+            action = w.action.QuickSelectArgs {
+                patterns = {
+                    'release-[0-9].[0-9]{1,4}.[0-9]{1,4}'
+                },
+            },
+        },
     },
 }
 
