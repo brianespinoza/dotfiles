@@ -5,7 +5,6 @@ cask "ngrok"
 brew "httpie"
 
 # cli tools
-brew "antidote"
 brew "thefuck"
 brew "zoxide"
 brew "ripgrep"

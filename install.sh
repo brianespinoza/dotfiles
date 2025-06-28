@@ -13,6 +13,7 @@ then
 fi
 
 echo "Updating brew..."
+brew install antidote
 brew update
 
 echo "Installing packages..."
