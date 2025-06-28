@@ -37,6 +37,31 @@ local function split_nav(resize_or_move, key)
 end
 
 
+function tab_title(tab_info)
+    local title = tab_info.tab_title
+    if title and #title > 0 then
+        return title
+    end
+
+    local cwd_path = tab_info.active_pane.current_working_dir.path
+    local last = ""
+    for segment in string.gmatch(cwd_path, "[^/]+") do
+        last = segment
+    end
+
+    return last
+end
+
+w.on(
+    'format-tab-title',
+    function(tab, tabs, panes, config, hover, max_width)
+        local title = tab_title(tab)
+        return {
+            { Text = title },
+        }
+    end
+)
+
 local defaultfont = w.font 'Fira Code'
 local default_cwd = os.getenv("HOME") .. "/code"
 
@@ -104,8 +129,8 @@ config.hyperlink_rules = w.default_hyperlink_rules()
 -- as long as a full url hyperlink regex exists above this it should not match a full url to
 -- github or gitlab / bitbucket (i.e. https://gitlab.com/user/project.git is still a whole clickable url)
 table.insert(config.hyperlink_rules, {
-  regex = [[["]?([\w\d]{1}[-\w\d]+)(/){1}([-\w\d\.]+)["]?]],
-  format = 'https://www.github.com/$1/$3',
+    regex = [[["]?([\w\d]{1}[-\w\d]+)(/){1}([-\w\d\.]+)["]?]],
+    format = 'https://git2.rhombus.corp/$1/$3',
 })
 
 return config

@@ -15,7 +15,6 @@
                                         { "key_code": "f" }
                                     ]
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_held_down": [
                                     {
                                         "key_code": "left_shift",
@@ -32,7 +31,6 @@
                                         { "key_code": "d" }
                                     ]
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_held_down": [
                                     {
                                         "key_code": "left_control",
@@ -49,7 +47,6 @@
                                         { "key_code": "f" }
                                     ]
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_held_down": [
                                     {
                                         "key_code": "left_shift",
@@ -66,7 +63,6 @@
                                         { "key_code": "f" }
                                     ]
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_held_down": [
                                     {
                                         "key_code": "left_option",
@@ -83,7 +79,6 @@
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_alone": [
                                     { "key_code": "a" },
                                     { "key_code": "s" }
@@ -104,7 +99,6 @@
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_alone": [
                                     { "key_code": "s" },
                                     { "key_code": "a" }
@@ -125,7 +119,6 @@
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_alone": [
                                     { "key_code": "a" },
                                     { "key_code": "d" }
@@ -146,7 +139,6 @@
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_alone": [
                                     { "key_code": "d" },
                                     { "key_code": "a" }
@@ -167,7 +159,6 @@
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_alone": [
                                     { "key_code": "a" },
                                     { "key_code": "f" }
@@ -188,7 +179,6 @@
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_alone": [
                                     { "key_code": "f" },
                                     { "key_code": "a" }
@@ -209,7 +199,6 @@
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_alone": [
                                     { "key_code": "s" },
                                     { "key_code": "d" }
@@ -230,7 +219,6 @@
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_alone": [
                                     { "key_code": "d" },
                                     { "key_code": "s" }
@@ -251,7 +239,6 @@
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_alone": [
                                     { "key_code": "s" },
                                     { "key_code": "f" }
@@ -272,7 +259,6 @@
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_alone": [
                                     { "key_code": "f" },
                                     { "key_code": "s" }
@@ -293,7 +279,6 @@
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_alone": [
                                     { "key_code": "d" },
                                     { "key_code": "f" }
@@ -314,7 +299,6 @@
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_alone": [
                                     { "key_code": "f" },
                                     { "key_code": "d" }
@@ -329,7 +313,6 @@
                             },
                             {
                                 "from": { "key_code": "a" },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_delayed_action": {
                                     "to_if_canceled": [{ "key_code": "a" }],
                                     "to_if_invoked": [{ "key_code": "vk_none" }]
@@ -350,7 +333,6 @@
                             },
                             {
                                 "from": { "key_code": "s" },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_delayed_action": {
                                     "to_if_canceled": [{ "key_code": "s" }],
                                     "to_if_invoked": [{ "key_code": "vk_none" }]
@@ -371,7 +353,6 @@
                             },
                             {
                                 "from": { "key_code": "c" },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_delayed_action": {
                                     "to_if_canceled": [{ "key_code": "c" }],
                                     "to_if_invoked": [{ "key_code": "vk_none" }]
@@ -392,7 +373,6 @@
                             },
                             {
                                 "from": { "key_code": "g" },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_delayed_action": {
                                     "to_if_canceled": [
                                         {
@@ -425,7 +405,6 @@
                                         { "key_code": "semicolon" }
                                     ]
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_held_down": [
                                     {
                                         "key_code": "right_shift",
@@ -442,7 +421,6 @@
                                         { "key_code": "k" }
                                     ]
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_held_down": [
                                     {
                                         "key_code": "right_shift",
@@ -459,7 +437,6 @@
                                         { "key_code": "j" }
                                     ]
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_held_down": [
                                     {
                                         "key_code": "right_shift",
@@ -476,7 +453,6 @@
                                         { "key_code": "j" }
                                     ]
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_held_down": [
                                     {
                                         "key_code": "right_control",
@@ -493,7 +469,6 @@
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_alone": [
                                     { "key_code": "semicolon" },
                                     { "key_code": "l" }
@@ -514,7 +489,6 @@
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_alone": [
                                     { "key_code": "l" },
                                     { "key_code": "semicolon" }
@@ -535,7 +509,6 @@
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_alone": [
                                     { "key_code": "semicolon" },
                                     { "key_code": "k" }
@@ -556,7 +529,6 @@
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_alone": [
                                     { "key_code": "k" },
                                     { "key_code": "semicolon" }
@@ -577,7 +549,6 @@
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_alone": [
                                     { "key_code": "semicolon" },
                                     { "key_code": "j" }
@@ -598,7 +569,6 @@
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_alone": [
                                     { "key_code": "j" },
                                     { "key_code": "semicolon" }
@@ -619,7 +589,6 @@
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_alone": [
                                     { "key_code": "l" },
                                     { "key_code": "k" }
@@ -640,7 +609,6 @@
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_alone": [
                                     { "key_code": "k" },
                                     { "key_code": "l" }
@@ -661,7 +629,6 @@
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_alone": [
                                     { "key_code": "l" },
                                     { "key_code": "j" }
@@ -682,7 +649,6 @@
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_alone": [
                                     { "key_code": "j" },
                                     { "key_code": "l" }
@@ -703,7 +669,6 @@
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_alone": [
                                     { "key_code": "k" },
                                     { "key_code": "j" }
@@ -724,7 +689,6 @@
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_if_alone": [
                                     { "key_code": "j" },
                                     { "key_code": "k" }
@@ -739,7 +703,6 @@
                             },
                             {
                                 "from": { "key_code": "semicolon" },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_delayed_action": {
                                     "to_if_canceled": [{ "key_code": "semicolon" }],
                                     "to_if_invoked": [{ "key_code": "vk_none" }]
@@ -760,7 +723,6 @@
                             },
                             {
                                 "from": { "key_code": "l" },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_delayed_action": {
                                     "to_if_canceled": [{ "key_code": "l" }],
                                     "to_if_invoked": [{ "key_code": "vk_none" }]
@@ -781,7 +743,6 @@
                             },
                             {
                                 "from": { "key_code": "k" },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_delayed_action": {
                                     "to_if_canceled": [{ "key_code": "k" }],
                                     "to_if_invoked": [{ "key_code": "vk_none" }]
@@ -802,7 +763,6 @@
                             },
                             {
                                 "from": { "key_code": "j" },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 170 },
                                 "to_delayed_action": {
                                     "to_if_canceled": [{ "key_code": "j" }],
                                     "to_if_invoked": [{ "key_code": "vk_none" }]
