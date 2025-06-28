@@ -43,10 +43,6 @@ stow aerospace
 
 echo "All packages have been stowed and symlinked."
 
-echo "Starting services ..."
-# yabai --start-service
-# skhd --start-service
-
-
 echo "Done!"
+echo "To start aerospace, cmd+space then type 'aerospace', open."
 

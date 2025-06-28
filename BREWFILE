@@ -3,6 +3,8 @@ tap "localstack/tap"
 brew "localstack-cli"
 cask "ngrok"
 brew "httpie"
+brew "pyenv"
+brew "docker"
 
 # cli tools
 brew "thefuck"
@@ -22,6 +24,9 @@ brew "neovim"
 # window manager
 brew "koekeishiya/formulae/yabai"
 cask "nikitabobko/tap/aerospace"
+
+# apps
+cask "raycast"
 
 # brew "koekeishiya/skhd"
 cask "karabiner-elements"
