@@ -86,4 +86,42 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
+glw() {
+  local since_date=$(date -v -10d +"%Y-%m-%d")  # macOS; for Linux: date -d '10 days ago' +%Y-%m-%d
+  local author_name=brian.espinoza@rhombus.com
+
+  # Colors (optional)
+  local RED='\033[0;31m'
+  local GREEN='\033[0;32m'
+  local BLUE='\033[0;34m'
+  local NC='\033[0m' # No Color
+
+  find . -type d -name ".git" | while read -r gitdir; do
+    local repo_dir=$(dirname "$gitdir")
+    cd "$repo_dir" || continue
+
+    # Use git log with error redirection; if it fails, skip
+    if git log --since="$since_date" --author="$author_name" --oneline 2>/dev/null | grep -q .; then
+      echo -e "${GREEN}Repository: $repo_dir${NC}"
+
+      git log --since="$since_date" --author="$author_name" --pretty=format:"Commit: %h | %ad | %an | %s" --date=short --name-only 2>/dev/null | \
+      awk -v repo="$repo_dir" -v blue="$BLUE" -v nc="$NC" '
+        /^Commit:/ {
+          if (commit_printed) print "";  # blank line before new commit except first
+          print blue $0 nc;
+          commit_printed = 1;
+          next
+        }
+        /^[[:space:]]*$/ { next }
+        {
+          print "    " repo "/" $0
+        }
+      '
+      echo
+    fi
+
+    cd - > /dev/null || return
+  done
+}
+alias glw=glw
 # zprof # Uncomment to enable profiling
